@@ -13,7 +13,7 @@ public class Main {
         Librarian lMunir = new Librarian("munirbesye", "12321");
 
         Automation atmn = new Automation();
-        atmn.addBook(munirsLibrary, lMunir);
+        atmn.addBook(munirsLibrary);
 
         int secenek = 0;
         System.out.println("Kullanıcı adı ve şifre giriniz:");

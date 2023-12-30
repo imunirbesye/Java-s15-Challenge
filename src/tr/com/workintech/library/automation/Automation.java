@@ -2,14 +2,13 @@ package tr.com.workintech.library.automation;
 
 import tr.com.workintech.library.person.Author;
 import tr.com.workintech.library.books.Book;
-import tr.com.workintech.library.person.Librarian;
 import tr.com.workintech.library.library.Library;
 import tr.com.workintech.library.person.Reader;
 
 import java.util.List;
 
 public class Automation {
-    public void addBook(Library library, Librarian librarian) {
+    public void addBook(Library library) {
         library.setNewCategory("Macera");
         library.setNewCategory("Polisiye");
         library.setNewCategory("Romantik");
