@@ -18,10 +18,6 @@ public class Library implements LibraryMethods {
         return books;
     }
 
-    public Set<Reader> getReaders() {
-        return readers;
-    }
-
     public Set<Author> getAuthors() { return authors; }
 
     public void setNewCategory(String category) {
@@ -130,6 +126,25 @@ public class Library implements LibraryMethods {
                 System.out.println("Okuyu eklemekten vazgeçtiniz. Ana menüye yönlendiriliyorsunuz...");
             }
         }
+    }
+
+    private void addReaderControl(String name){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Okuyucu tip: ");
+        String type = scanner.nextLine();
+
+        System.out.print("Adres: ");
+        String address = scanner.nextLine();
+
+        System.out.print("Telefon numarası: ");
+        String telefon = scanner.nextLine();
+
+        System.out.print("Bakiye: ");
+        double cash = Double.parseDouble(scanner.nextLine());
+
+        Reader r = new Reader(type, name, address, telefon, cash);
+        readers.add(r);
     }
 
     public void addReader(Reader reader) {
@@ -265,24 +280,5 @@ public class Library implements LibraryMethods {
                 return reader;
         }
         return null;
-    }
-
-    private void addReaderControl(String name){
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Okuyucu tip: ");
-        String type = scanner.nextLine();
-
-        System.out.print("Adres: ");
-        String address = scanner.nextLine();
-
-        System.out.print("Telefon numarası: ");
-        String telefon = scanner.nextLine();
-
-        System.out.print("Bakiye: ");
-        double cash = Double.parseDouble(scanner.nextLine());
-
-        Reader r = new Reader(type, name, address, telefon, cash);
-        readers.add(r);
     }
 }
